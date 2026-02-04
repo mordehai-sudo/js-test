@@ -29,11 +29,11 @@ body {
 
     width: 50%;
     height: 100%;
-    background: rgb(43, 43, 128);
+    /* background: rgb(43, 43, 128); */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
 }
 
 .left-container {
@@ -41,11 +41,21 @@ body {
 
     width: 50%;
     height: 100%;
-    background: rgb(120, 120, 214);
+    /* background: rgb(120, 120, 214); */
     display: flex;
     justify-content: center;
     align-items: center;
 
+}
+
+.turn {
+    background: rgb(43, 43, 128);
+    color: white;
+
+}
+
+.winner {
+    background: greenyellow;
 }
 
 .right-inner-container {
