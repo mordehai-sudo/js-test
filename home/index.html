@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roll Dice Game</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="../script.js" defer></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <h2>Welcome to dice game!</h2>
+            <h1>Game Rules</h1>
+
+            <ul>
+                <li>Set your max score on the first page to start the game.</li>
+                <li>Players take turns clicking the "Roll Dice" button. Each
+                    player gets 5 rolls per turn.</li>
+                <li>Add the total of the dice to your current score. If both
+                    dice show the same number, your current score resets to
+                    0.</li>
+                <li>Press "Hold" to keep your score and end your turn. The turn
+                    will pass to the other player.</li>
+                <li>The first player to reach the max score wins the game.</li>
+            </ul>
+            <h1>Choose Max Score:
+            </h1>
+            <form id="myForm" >
+                <input id="score" name="score" placeholder="Enter max score"
+                    type="number">
+                <button type="submit">
+                    <!-- <a href="../game/game.html"> -->
+                         SRART
+                        GAME!
+                    <!-- </a> -->
+                    </button>
+                <p class="error-message"></p>
+
+            </form>
+        </div>
+    </body>
+</html>
