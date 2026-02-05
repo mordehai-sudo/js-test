@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Roll Dice Game</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="../script.js" defer></script>
-    </head>
-    <body>
-        <div class="game-container">
 
-            <div class="score-container">
-                <h1 id="score-title">The max score is: 1</h1>
-            </div>
-            <div class="plyers-container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../script.js" defer></script>
+</head>
 
-                <div class="right-container">
-                    <div class="right-inner-container">
+<body>
+    <div class="game-container">
 
-                        <div class="player-score">
+        <div class="score-container">
+            <h1 id="score-title">The max score is: 1</h1>
+        </div>
+        <div class="plyers-container">
 
-                            <h1>Player 1</h1>
-                            <h1>0</h1>
-                        </div>
-                        <div class="current-score">
-                            <h3>Current Score</h3>
-                            <h2>0</h2>
-                        </div>
+            <div class="right-container">
+                <div class="right-inner-container">
 
+                    <div class="player-score">
+
+                        <h1>Player 1</h1>
+                        <h1 class="p1-score">0</h1>
                     </div>
-                </div>
-
-                <div class="left-container">
-
-                    <div class="left-inner-container">
-                        <div class="player-score">
-
-                            <h1>Player 2</h1>
-                            <h1>0</h1>
-                        </div>
-
-                        <div class="current-score">
-                            <h3>Current Score</h3>
-                            <h2>0</h2>
-                        </div>
+                    <div class="p1-current-score">
+                        <h3>Current Score</h3>
+                        <h2 class="p1-current-score">0</h2>
                     </div>
+
                 </div>
             </div>
 
-            <div class="dies-container">
-                <div class="img-container">
-                    <img src="../images/five.png" alt>
-                    <img src="../images/one.png" alt>
-                </div>
-                <div class="btn-container">
-                    <button class="new-game btn">NEW GAME</button>
-                    <button id="roll-btn" class="roll btn">ROLL DICE(<span id="roll-count"></span> )</button>
-                    <button class="hold btn">HOLD</button>
+            <div class="left-container">
+
+                <div class="left-inner-container">
+                    <div class="player-score">
+
+                        <h1>Player 2</h1>
+                        <h1 class="p2-score">0</h1>
+                    </div>
+
+                    <div class="p2-current-score">
+                        <h3>Current Score</h3>
+                        <h2 class="p1-current-score">0</h2>
+                    </div>
                 </div>
             </div>
         </div>
 
-    </body>
+        <div class="dies-container">
+            <div class="img-container">
+                <img class="dies-1" src="../images/five.png" alt>
+                <img class="dies-2" src="../images/one.png" alt>
+            </div>
+            <div class="btn-container">
+                <button class="new-game btn">NEW GAME</button>
+                <button id="roll-btn" class="roll btn">ROLL DICE(<span id="roll-count"></span> )</button>
+                <button class="hold btn">HOLD</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
 </html>
