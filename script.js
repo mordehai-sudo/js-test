@@ -42,20 +42,19 @@ newGameBtn.addEventListener("click", () => {
 })
 
 holdBtn.addEventListener("click", () => {
-    console.log("hold clickd");
+
     countRoll = 5;
     if (turn === 1) {
         playre1Score = playre1CurrentScore;
         turn = 2;
-        console.log(p1CurrentScoreEl.classList);
 
-        p1CurrentScoreEl.classList.remove("turn")
-        p2CurrentScoreEl.classList.add("turn")
+        plyerOneEl.classList.remove("turn")
+        plyerTowEl.classList.add("turn")
     } else {
         playre2Score = playre2CurrentScore;
         turn = 1;
-        p2CurrentScoreEl.classList.remove("turn")
-        p1CurrentScoreEl.classList.add("turn")
+        plyerTowEl.classList.remove("turn")
+        plyerOneEl.classList.add("turn")
     }
 })
 
@@ -71,8 +70,8 @@ function startGame() {
     }
 }
 startGame();
+
 rollBtnEl.addEventListener('click', () => {
-    console.log("roll btn clicked");
 
     if (countRoll > 0 && playre1Score < scoreMax && playre2Score < scoreMax) {
         if (turn === 1) {
