@@ -42,6 +42,17 @@ newGameBtn.addEventListener("click", () => {
 })
 
 holdBtn.addEventListener("click", () => {
+    if (playre1Score > scoreMax) {
+        plyerOneEl.classList.remove('turn')
+        plyerOneEl.classList.add('winner')
+        plyerOneEl.textContent = `The Winner is Player 1 with ${playre1Score} points`
+    } else if (playre2Score > scoreMax) {
+        plyerTowEl.classList.remove('turn')
+        plyerTowEl.classList.add('winner');
+        plyerTowEl.textContent = `The Winner is Player 2 with ${playre2Score} points`
+
+
+    }
 
     countRoll = 5;
     if (turn === 1) {
@@ -73,21 +84,21 @@ startGame();
 
 rollBtnEl.addEventListener('click', () => {
 
-    if (countRoll > 0 && playre1Score < scoreMax && playre2Score < scoreMax) {
+    if (countRoll > 0 && (playre1Score < scoreMax || playre2Score < scoreMax)) {
         if (turn === 1) {
             let ranInx1 = getRandomIndex();
             let ranInx2 = getRandomIndex();
-
             dies1El.src = diesImgs[ranInx1 === 0 ? 0 : ranInx1 - 1];
             dies2El.src = diesImgs[ranInx2 === 0 ? 0 : ranInx2 - 1];
-
             if (ranInx1 !== ranInx2) {
-
                 playre1CurrentScore += ranInx1;
                 playre1CurrentScore += ranInx2;
                 p1CurrentScoreEl.textContent = playre1CurrentScore
 
             } else {
+                playre1CurrentScore = 0;
+                playre1Score = 0;
+                plyerOneEl.classList.remove('turn')
                 turn = 2;
             }
         } else {
@@ -102,6 +113,9 @@ rollBtnEl.addEventListener('click', () => {
                 playre2CurrentScore += ranInx2;
                 p2CurrentScoreEl.textContent = playre2CurrentScore
             } else {
+                playre2CurrentScore = 0;
+                playre2Score = 0;
+                plyerTowEl.classList.remove('turn')
                 turn = 1;
             }
         }
@@ -111,9 +125,13 @@ rollBtnEl.addEventListener('click', () => {
     if (playre1Score > scoreMax) {
         plyerOneEl.classList.remove('turn')
         plyerOneEl.classList.add('winner')
+        plyerOneEl.textContent = `The Winner is Player 1 with ${playre1Score} points`
     } else if (playre2Score > scoreMax) {
         plyerTowEl.classList.remove('turn')
-        plyerTowEl.classList.add('winner')
+        plyerTowEl.classList.add('winner');
+        plyerTowEl.textContent = `The Winner is Player 2 with ${playre2Score} points`
+
+
     }
 
 })
